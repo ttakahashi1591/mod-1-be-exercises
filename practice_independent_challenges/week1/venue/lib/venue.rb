@@ -16,4 +16,8 @@ class Venue
   def yell_at_patrons
     @patrons.map(&:upcase)
   end
+
+  def over_capacity?
+    @patrons.length > capacity
+  end
 end
