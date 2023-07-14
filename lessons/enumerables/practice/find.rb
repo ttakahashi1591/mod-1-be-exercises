@@ -16,7 +16,7 @@ def no_waldo
     words = ["scarf", "sandcastle", "flag", "pretzel", "crow", "key"]
     found = words.find do |word|
 
-      # Your code goes here
+      "waldo" == word
 
     end
 
@@ -33,8 +33,9 @@ end
 
 def cannot_find_3_letter_words
     words = ["piglet", "porridge", "bear", "blueberry"]
-
-    # Your code goes here
+    length = word.find do |word|
+        length != 3
+    end
 
     # expected return value is nil
 end

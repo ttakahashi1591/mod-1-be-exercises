@@ -27,7 +27,7 @@ RSpec.describe Hippogriff do
 
   it "when created its sack is empty" do
     hippogriff = Hippogriff.new("jane", :magenta)
-
+# require 'pry';binding.pry
     expect(hippogriff.moonrocks).to eq([])
   end
 

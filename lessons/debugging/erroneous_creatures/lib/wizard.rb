@@ -8,8 +8,8 @@ class Wizard
     @bearded = bearded
   end
 
-  def bearded?
-    @bearded
+  def bearded? 
+    @bearded[:bearded]
   end
 
   def incantation(x)

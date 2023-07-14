@@ -5,15 +5,16 @@
 def capitalize
     names = ["alice", "bob", "charlie"]
 
-    # Your code goes here
-
+    cap_names = names.map { |name| name.capitalize}
     # expected return value is ["Alice", "Bob", "Charlie"]
 end
+
+p captitalize
 
 def doubles
     numbers = [1, 2, 3, 4, 5]
 
-    # Your code goes here
+    
 
     # expected return value is [2, 4, 6, 8, 10]
 end
@@ -37,7 +38,9 @@ end
 def normalize_zip_codes
     numbers = [234, 10, 9119, 38881]
 
-    # Your code goes here
+    # "%05d" %number      *** modulo
+
+    # look for rjust and ljust
 
     # expected return value is ["00234", "00010", "09119", "38881"]
 end

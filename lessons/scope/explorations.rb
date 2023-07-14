@@ -3,8 +3,8 @@ require 'pry'
 ## Example 1
 
 # x = 10
-# puts x
-# puts y
+# puts x => 10
+# puts y => Error
 
 ## Example 2
 
@@ -28,8 +28,8 @@ require 'pry'
 #   puts x
 # end
 
-# x = 2
-# print_variable
+# x = 2 # Global
+# print_variable # 4
 
 ## Example 5
 
@@ -139,3 +139,4 @@ require 'pry'
 # numbers.each do |number|
 #   puts number
 # end
+# puts number
