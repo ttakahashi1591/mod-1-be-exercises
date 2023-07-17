@@ -27,4 +27,34 @@ RSpec.describe Apartment do
       expect(@apartment.is_rented?).to eq(true)
     end
   end
+
+  describe "#add_room" do
+    it "add a room to the apartment" do
+      @apartment = Apartment.new
+      bathroom = Room.new("bathroom")
+      
+      @apartment.add_room(bathroom)
+      @apartment.add_room(Room.new("laundry"))
+      @apartment.add_room(Room.new("kitchen"))
+      @apartment.add_room(Room.new("bedroom")) 
+
+      expect(@apartment.rooms).to be_a(Array)
+    end
+  end
+
+  describe "#list_rooms_by_name_alphabetically" do
+    it "lists rooms in array in alphabetical order" do
+      @apartment = Apartment.new
+      bathroom = Room.new("bathroom")
+      
+      @apartment.add_room(bathroom)
+      @apartment.add_room(Room.new("laundry"))
+      @apartment.add_room(Room.new("kitchen"))
+      @apartment.add_room(Room.new("bedroom")) 
+
+      expect(@apartment.rooms).to be_a(Array)
+
+      expect(@apartment.list_rooms_by_name_alphabetically).to eq(["bathroom", "bedroom", "kitchen", "laundry"])
+    end
+  end
 end

@@ -11,8 +11,9 @@ RSpec.describe Room do
     end
   end
 
-  describe "#name"
+  describe "#name" do
     it "has a name" do
       expect(@room.name).to eq("bathroom")
     end
+  end
 end
