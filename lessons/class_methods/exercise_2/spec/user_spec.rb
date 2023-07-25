@@ -7,7 +7,7 @@ RSpec.describe User do
     user = User.new("Alex")
   end
 
-  xit "can say hello" do
+  it "can say hello" do
     user = User.new("Alex")
     expect(user.say_hello).to eq("Hello, Alex")
   end
@@ -18,7 +18,7 @@ RSpec.describe User do
         {name: "Brian"},
         {name: "Megan"},
       ]
-    binding.pry ## Can you call User.create_multiple(users) in pry? What does it return?
+    # binding.pry ## Can you call User.create_multiple(users) in pry? What does it return?
     expect(User.create_multiple(users)).to be_a Array
     expect(User.create_multiple(users).length).to eq 3
 
@@ -28,5 +28,13 @@ RSpec.describe User do
     expect(created_users[0].name).to eq("Sal")
   end
 
-
+  xit "count the number of users" do
+    users = [
+      {name: "Sal"},
+      {name: "Brian"},
+      {name: "Megan"},
+    ]
+    created_users = User.create_multiple(users)
+    expect(User.count).to eq(3)
+  end
 end

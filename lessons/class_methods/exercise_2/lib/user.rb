@@ -10,7 +10,7 @@ class User
   end
 
   def say_hello
-    #binding.pry ##What will be output here?
+    binding.pry ##What will be output here?
     "Hello, " + @name
   end
 
@@ -19,5 +19,9 @@ class User
       new_user = User.new(user[:name])
       #binding.pry ## What is new_user? What properties does it have?
     end
+  end
+
+  def self.count
+    User.count
   end
 end
