@@ -13,7 +13,6 @@ RSpec.describe Potluck do
   it "exists and has attributes" do   
     potluck = Potluck.new("7-13-18")
 
-
     expect(potluck.date).to eq("7-13-18")
     expect(potluck.dishes).to be_an(Array)
     expect(potluck.dishes).to eq([])
@@ -81,7 +80,7 @@ RSpec.describe Potluck do
     potluck.add_dish(cocktail_meatballs)
     potluck.add_dish(candy_salad)
     potluck.add_dish(bean_dip)
-    
+
     expect(potluck.ratio(:appetizer)).to eq(50.0)
   end
 end
